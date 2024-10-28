@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AppCIMC</string>
+    <string name="hombre">Hombre</string>
+    <string name="mujer">Mujer</string>
+    <string name="altura">Altura</string>
+    <string name="alturanumero">120 cm</string>
+</resources>

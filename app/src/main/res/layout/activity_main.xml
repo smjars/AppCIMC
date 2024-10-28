@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:paddingTop="25dp"
+    android:background="@color/negro"
+    android:layout_gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/hombre"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mujer"
+        app:cardCornerRadius="12dp"
+        android:layout_marginEnd="5dp"
+        app:cardBackgroundColor="@color/rosaoscuro1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:contentDescription="@string/hombre"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:src="@drawable/man"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hombre"
+                android:textSize="30sp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mujer"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hombre"
+        app:cardCornerRadius="12dp"
+        android:layout_marginStart="5dp"
+        app:cardBackgroundColor="@color/rosaoscuro2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:contentDescription="@string/mujer"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+
+                android:src="@drawable/woman"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mujer"
+                android:textSize="30sp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cajaaltura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/hombre"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/negro"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="15dp"
+            android:padding="10dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/altura"
+                android:textSize="30sp"
+                android:textColor="@color/white" android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/altura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alturanumero"
+                android:textSize="35sp"
+                android:textColor="@color/white"/>
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/slider"
+                android:contentDescription="@string/app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/hombre"
+                app:layout_constraintStart_toStartOf="parent"
+                android:valueFrom="120"
+                android:valueTo="300"
+                app:haloColor="@color/rosa"
+                app:tickColor="@color/rosa"
+                app:tickColorInactive="@color/rosa"
+                app:thumbStrokeColor="@color/rosa"
+                app:trackColorInactive="@color/rosaclaro"
+                app:tickColorActive="@color/rosa"
+                app:thumbColor="@color/white"
+                android:stepSize="1"
+                >
+
+            </com.google.android.material.slider.RangeSlider>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
