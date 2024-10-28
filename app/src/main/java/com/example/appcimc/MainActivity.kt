@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         mujer.setOnClickListener { seleccionar("mujer") }
         slider.addOnChangeListener { _, value, _ ->
             val valor = value.toInt().toString()
-            altura.text = "$valor cm"
+            altura.text = "$valor CM"
         }
     }
     private fun seleccionar(sel:String) {
